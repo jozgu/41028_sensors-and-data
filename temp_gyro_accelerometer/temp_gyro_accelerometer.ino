@@ -43,21 +43,21 @@ void setup() {
   pinMode (echoPin, INPUT);
   Serial.begin(9600);
   // Controller settup 
-  Serial.begin(9600); 
-  irrecv.enableIRIn();
-  irrecv.blinnk13(true);
+  // Serial.begin(9600); 
+  // irrecv.enableIRIn();
+  // irrecv.blinnk13(true);
 }
 
 void loop() {
 
-  if (irrecv.decode(&results.value)){
-    switch(results.value){
-          case 0xFF38C7: //Keypad button "5"
-          digitalWrite(redPin, HIGH);
-          delay(2000);
-          digitalWrite(redPin, LOW);
-          }
-  }
+  // if (irrecv.decode(&results.value)){
+  //   switch(results.value){
+  //         case 0xFF38C7: //Keypad button "5"
+  //         digitalWrite(redPin, HIGH);
+  //         delay(2000);
+  //         digitalWrite(redPin, LOW);
+  //         }
+  // }
   // GYRO SETTUP 
   Wire.beginTransmission(MPU_ADDR);
   Wire.write(0x3B);
